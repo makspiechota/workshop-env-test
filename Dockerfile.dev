@@ -1,4 +1,4 @@
-FROM node:20-bookworm-slim
+FROM node:24-bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
       git \
@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       procps \
       less \
       vim-tiny \
+      graphviz \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
